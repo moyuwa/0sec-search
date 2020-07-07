@@ -6,7 +6,8 @@
 kali@kali:~$ python3 vs_0sec.py
 
     零组资料文库离线漏洞名搜索,功能：更新 、查询
-        -up:更新数据
+        -up:在线更新数据
+        -offline:离线更新数据库（根据tree.json文件更新）
         -s [keyword]:查询关键字
 
 # 使用：更新数据库
