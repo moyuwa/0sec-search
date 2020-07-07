@@ -20,7 +20,7 @@ kali@kali:~$ python3 vs_0sec.py -s mail
     安全技术|Disable function| mail         https://wiki.0-sec.org/api/wiki/articleInfo/6237
 
 # 使用：离线更新
-浏览器访问https://wiki.0-sec.org/api/wiki/tree将json数据保存到本地（与脚本同目录下），执行命令更新数据库
+浏览器访问 https://wiki.0-sec.org/api/wiki/tree 将json数据保存到本地（与脚本同目录下），执行命令更新数据库
 
 kali@kali:~$ python3 vs_0sec.py -offline
 
