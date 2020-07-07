@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # coding=utf-8
 # python version 3.7
 # 零组资料文库离线漏洞名搜索
