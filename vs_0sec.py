@@ -103,3 +103,6 @@ if __name__ == '__main__':
         print('更新完成')
     if sys.argv[1] == '-s':
         _0sec.searchsqlit3(sys.argv[2])
+    if sys.argv[1] == '-offline':
+        _0sec.dump2sqlit3()
+        print('更新完成')
