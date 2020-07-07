@@ -1,5 +1,6 @@
 # 0sec-search
 新版零组资料文库离线漏洞名搜索，功能：更新 、查询 （不包含漏洞详情）
+20200707：网站需翻墙，增加离线更新方式
 
 kali@kali:~$ python3 vs_0sec.py
 
@@ -18,5 +19,12 @@ kali@kali:~$ python3 vs_0sec.py -s mail
     Web安全|Coremail|Coremail配置文件信息泄漏       https://wiki.0-sec.org/api/wiki/articleInfo/5661
     安全技术|Disable function| mail         https://wiki.0-sec.org/api/wiki/articleInfo/6237
 
+# 使用：离线更新
+浏览器访问https://wiki.0-sec.org/api/wiki/tree将json数据保存到本地（与脚本同目录下），执行命令更新数据库
+kali@kali:~$ python3 vs_0sec.py -offline
 
-当前项目漏洞信息版本20200516
+    更新完成
+    
+
+当前项目漏洞信息版本20200707
+
