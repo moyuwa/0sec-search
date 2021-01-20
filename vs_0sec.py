@@ -32,7 +32,7 @@ class search_0sec():
                     break
             except:
                 time.sleep(3)
-    print('tree.json文件下载成功')
+        print('tree.json文件下载成功')
 
     # 将json转存到sqlit3数据库便于查询
     def dump2sqlit3(self):
