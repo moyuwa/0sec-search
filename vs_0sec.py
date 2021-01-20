@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # coding=utf-8
 # python version 3.7
-# 零组资料文库离线漏洞名搜索
+# 零组资料文库离线漏洞名搜索 by 时光难逆
 
 import os, sys
 import json, sqlite3, time
@@ -11,12 +11,12 @@ import requests
 # 功能：更新 、查询
 class search_0sec():
     def __init__(self):
-        self._db_name = 'vulsearch-database.db'  # 数据库文件名
+        self._db_name = 'vul-0sec.db'  # 数据库文件名
         self._table_name = '0sec'
         if os.path.exists(self._db_name) and os.path.isfile(self._db_name):
             pass
         else:
-            print('未找到数据库文件vulsearch-database.db，将自动创建空库')
+            print('未找到数据库文件vul-0sec.db，将自动创建空库')
 
     # 下载漏洞json到本地
     def downloadjson(self):
@@ -32,9 +32,11 @@ class search_0sec():
                     break
             except:
                 time.sleep(3)
+    print('tree.json文件下载成功')
 
     # 将json转存到sqlit3数据库便于查询
     def dump2sqlit3(self):
+        print('开始将json转换到sqlite3数据库')
         # 创建库
         _conn = sqlite3.connect(self._db_name)
         # 创建表,只保留2级目录
@@ -62,6 +64,7 @@ class search_0sec():
                     v = (str(name1), str(name2), str(vinfo))
                     cur.execute(qy_config, v)
                 _conn.commit()
+            print("[{}] 转换完成".format(name1))
         _conn.close()
 
     # 从2级节点中循环提取子节点
